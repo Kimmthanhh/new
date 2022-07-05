@@ -1,0 +1,185 @@
+/* GROUP 1 */
+/* TODO: HEADER, btn Signin*/
+header{
+    position: fixed;
+    top:0; 
+    left:0; 
+    right:0;
+    background:var(--white);
+    padding:2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    background-color: var(--pink);
+}
+
+/* logo */
+header .logo{
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+/* navbar__links */
+header .navbar a {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding:0 1.5rem;
+    color: var(--white);
+}
+
+header .navbar a:hover{
+    color:var(--white-light);
+}
+
+/* navbar__icons */
+header .icons a{
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover{
+    color:var(--white-light);
+}
+
+header #toggler{
+    display: none;
+}
+
+header .fa-bars{
+    font-size: 3rem;
+    color:#333;
+    border-radius: .5rem;
+    padding:.5rem 1.5rem;
+    cursor: pointer;
+    border:.1rem solid rgba(0,0,0,.3);
+    display: none;
+}
+
+/* media queries  */
+@media (max-width:992px){
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding:2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+    .home{
+        background-position: left;
+    }
+
+}
+
+@media (max-width:768px){
+
+    header .fa-bars{
+        display: block;
+    }
+
+    header .navbar{
+        position:absolute;
+        top:100%; left:0; right:0;
+        background:#eee;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header #toggler:checked ~ .navbar{
+        clip-path:polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a{
+        margin:1.5rem;
+        padding:1.5rem;
+        background:#fff;
+        border:.1rem solid rgba(0,0,0,.1);
+        display: block;
+    }
+
+    .home .content h3{
+        font-size: 5rem;
+    }
+
+    .home .content span{
+        font-size: 2.5rem;
+    }
+
+    .icons-container .icons h3{
+        font-size: 2rem;
+    }
+    
+    .icons-container .icons span{
+        font-size: 1.7rem;
+    }
+    
+}
+
+@media (max-width:600px){   
+    html{
+        font-size: 50%;
+    }
+    .heading{
+        font-size: 3rem;
+    }
+    .home .right__image{
+        display: none;
+    }
+}
+
+ /* GROUP 2 */
+/* TODO: HOME */ 
+.home{
+    display: flex;
+    align-items: center;
+    min-height:100vh;
+    background: url(../img/banner-right.png) no repeat;
+    z-index: 1;
+    background-size: cover;
+    position: relative;
+}
+
+.home .content{
+    max-width: 50rem;
+}
+
+.home .content span{
+    font-size: 3.5rem;
+    color: var(--pink);
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.home .content p{
+    font-size: 1.5rem;
+    color: #999;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+.button{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: none;
+    color: var(--btn);
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+.button:hover{
+    color: var(--white);
+    background: var(--btn-light);
+}
+.right__image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 43.5%;
+}
+
